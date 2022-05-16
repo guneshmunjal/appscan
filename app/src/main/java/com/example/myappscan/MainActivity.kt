@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val scannerView = findViewById<CodeScannerView>(R.id.scanner_view)
 
-        val codeScanner = CodeScanner(this, scannerView)
+       codeScanner = CodeScanner(this, scannerView)
 
         // Parameters (default values)
         codeScanner.camera = CodeScanner.CAMERA_BACK // or CAMERA_FRONT or specific camera id
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         scannerView.setOnClickListener {
-            codeScanner.startPreview()
+         codeScanner.startPreview()
         }
     }
 
